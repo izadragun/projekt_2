@@ -4,6 +4,24 @@ from project.config import DATABASE_PATH
 
 
 def load_data():
+    """
+    Wczytuje dane z bazy SQLite znajdującej się pod ścieżką `DATABASE_PATH`.
+
+    Funkcja łączy się z bazą danych, pobiera wszystkie rekordy z tabel:
+    - patients
+    - visits
+    - measurements
+
+    Zwraca dane jako krotkę trzech obiektów pandas.DataFrame.
+
+    Zwraca:
+        tuple: Krotka w postaci (patients, visits, measurements),
+               gdzie każdy element to pandas.DataFrame.
+
+    Wyjątki:
+        sqlite3.DatabaseError: Jeśli wystąpi problem z dostępem do bazy lub jej strukturą.
+        RuntimeError: W przypadku nieoczekiwanego błędu.
+    """
     try:
 
         conn = sqlite3.connect(DATABASE_PATH)
@@ -29,5 +47,5 @@ def load_data():
 
     except Exception as e:
         raise RuntimeError(
-            "Nieoczekiwany błąd podczas wczytywania danych z bazy SQLite"
+            "Błąd podczas wczytywania danych z bazy SQLite"
         ) from e
