@@ -34,12 +34,11 @@ TIME_COLUMN = "visit_date"
 STATIC_COLUMNS = ["age", "gender", "class"]
 
 EXCLUDE_COLUMNS = [
-    "patient_id",
-    "visit_id",
+    PATIENT_ID_COLUMN,
+    VISIT_ID_COLUMN,
     "class",
     "gender"
 ]
-
 
 FEATURE_COLUMNS = [
     "BMI",
