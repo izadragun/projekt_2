@@ -21,9 +21,10 @@ INPUT_STATS_PATH = TABLES_PATH / "input_stats.csv"
 
 OUTPUT_STATS_PATH = TABLES_PATH / "output_stats.csv"
 
-# Parametry agregacji
+# Parametry agregacji i grupowania
 
 AGGREGATION_METHODS = ["mean", "median"]
+GROUP_BY_COLUMN = ["gender"]
 
 
 # Kolumny
