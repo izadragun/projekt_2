@@ -75,6 +75,8 @@ def save_table(df: pd.DataFrame, subdir:str, filename: str):
     ----------
     df : pd.DataFrame
         Dane do zapisania.
+    subdir: str
+        Podfolder
     filename : str
         Nazwa pliku (np. "stats_input.csv").
     """
@@ -95,6 +97,8 @@ def save_plot(fig, subdir:str, filename: str):
     ----------
     fig : plotly.graph_objects.Figure
         Obiekt wykresu Plotly.
+    subdir: str
+        Podfolder
     filename : str
         Nazwa pliku, np. "feature_bar_mean_vs_median.html".
     """
